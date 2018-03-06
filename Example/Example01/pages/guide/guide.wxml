@@ -1,0 +1,15 @@
+<!--pages/guide/guide.wxml-->
+<view>
+  <view>第一步：</view>
+  <view>
+    点击右上角按钮，选择“关于XXX”
+  </view>
+  <view>第二步：</view>
+  <view>
+    点击右上角按钮，选择“设置”
+  </view>
+  <view>第三步：</view>
+  <view>
+    开启页面内列举的功能
+  </view>
+</view>

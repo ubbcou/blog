@@ -1,0 +1,3 @@
+<!--pages/index.wxml-->
+<button bindtap="testAddress">测试地址授权</button>
+<button bindtap="TestWeRunData">测试发票抬头授权</button>
