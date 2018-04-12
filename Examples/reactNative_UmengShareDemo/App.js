@@ -9,8 +9,12 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Button,
+  Alert
 } from 'react-native';
+// 引入分享
+import ShareUtil from './src/libs/ShareUtil';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -21,9 +25,16 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  _onPressShare() {
+    ShareUtil.shareboard('Check react-native umeng share sdk','imgUrl','https://github.com/ubbcou/blog/issues/18','this is Title.',[1],(code,message) =>{
+      Alert.alert('title', 'msg:' + message);
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
+        <Button title="点击分享" onPress={this._onPressShare.bind(this)} />
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
