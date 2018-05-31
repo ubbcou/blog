@@ -1,27 +1,25 @@
 # vuex 的简单示例
 
-Author: ubbcou
-E-Mail: ubbcou@outlook.com
-GitHub: [ubbcou](https://github.com/ubbcou)
-Blog: [Blog](https://github.com/ubbcou/blog/issues)
+Author: ubbcou  
+E-Mail: ubbcou@outlook.com  
+GitHub: [ubbcou](https://github.com/ubbcou)  
+Blog: [Blog](https://github.com/ubbcou/blog/issues)  
+源码：[源码](https://github.com/ubbcou/blog/tree/master/Examples/vuexdemo-20180531)
+
 
 有段时间没有使用 vuex 搭建应用了，倒是挺手生的。恰巧有人问起，于是看了看文档，利用 parcel 内置了的开发服务器搭配 axios，简单的搭建了一个 vuex 的示例。
 
 ## 注意
-关于 vuex,这几点需要注意：
-
+关于 vuex,这几点需要注意：  
 - 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。
 - mutation 必须同步执行
 - Action 类似于 mutation，不同在于：
     1. Action 提交的是 mutation，而不是直接变更状态。
     2. Action 可以包含任意异步操作。
 
-关于源码：
-
-可以简单使用 parcel 在服务器环境下使用。
-
-应确保已有 parcel：`yarn global add parcel-bundler` or `npm install -g parcel-bundler`。
-
+关于源码：  
+可以简单使用 parcel 在服务器环境下使用。  
+应确保已有 parcel：`yarn global add parcel-bundler` or `npm install -g parcel-bundler`。  
 在当前目录执行 `parcel`，浏览器进入 `localhose:1234`。
 
 
@@ -96,3 +94,4 @@ new Vue({
 ## 图样
 
 效果图：
+![](https://github.com/ubbcou/blog/blob/master/Examples/vuexdemo-20180531/20180531204604.png?raw=true)
