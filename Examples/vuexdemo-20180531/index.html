@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    [v-cloak]{display: none}
+  </style>
+</head>
+<body>
+  <div id="root" v-cloak>
+    <h3>电影列表</h3>
+    <ul v-if="movie">
+      <li v-for="(item, index) in movie.subjects" :key="index">
+        <a :href="item.alt">{{item.original_title}}</a>
+      </li>
+    </ul>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script> <!-- 引入polyfill (如果你支持的浏览器并没有实现 Promise (比如 IE)) -->
+<script src="https://unpkg.com/vue"></script> <!-- 引入vue -->
+<script src="https://unpkg.com/vuex"></script><!-- 引入vuex -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  
+  var store = new Vuex.Store({
+    state: {
+      movie: null
+    },
+    // mutation 必须同步执行
+    mutations: {
+      'GET_MOVIE': function(state, result) {
+        console.log(result)
+        state.movie = result;
+      }
+    },
+    actions: {
+      getMovie: function(context) {
+        axios.get('http://localhost:1234/api/movie.json')
+        .then(function(response) {
+          context.commit('GET_MOVIE', response.data);
+        })
+        .catch(function(error) {
+          // 错误处理
+          console.log(error)
+        })
+      }
+    }
+  })
+
+
+  new Vue({
+    el: '#root',
+    data: {
+
+    },
+    computed: {
+      movie: function() {
+        return store.state.movie
+      }
+    },
+    mounted: function() {
+      this.getMovies();
+    },
+    methods: {
+      // 分发 actions（更新state数据）
+      getMovies: function() {
+        store.dispatch('getMovie');
+      }
+    }
+  })
+
+</script>
+</html>
