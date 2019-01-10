@@ -49,3 +49,8 @@
 
 - typora	
   - [LINK](https://www.typora.io/)
+
+### 编辑器
+
+- visual studio code
+  - [LINK](https://code.visualstudio.com/)
