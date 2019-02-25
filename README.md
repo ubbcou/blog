@@ -54,3 +54,15 @@
 
 - visual studio code
   - [LINK](https://code.visualstudio.com/)
+
+### 服务器搭建
+
+- tengine
+
+### 镜像刻录
+
+- Etcher
+- POWERISO
+- rufus
+- md5summer
+- Win32DiskImager
