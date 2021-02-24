@@ -17,6 +17,8 @@
 
 - LICEcap *(推荐)*
   - [LINK](https://www.cockos.com/licecap/)
+- screentogif
+  - [Link]（https://www.screentogif.com/）
 
 ### 下载
 
