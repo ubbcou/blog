@@ -68,3 +68,6 @@
 - rufus
 - md5summer
 - Win32DiskImager
+
+### windows activator
+HEU_KMS_Activator
